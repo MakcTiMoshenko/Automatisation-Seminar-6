@@ -1,0 +1,3356 @@
+Index: src/main/java/org/max/home/spoon/ConvertAmountsDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/spoon/ConvertAmountsDto.java b/src/main/java/org/max/home/spoon/ConvertAmountsDto.java
+new file mode 100644
+--- /dev/null	(date 1709282214954)
++++ b/src/main/java/org/max/home/spoon/ConvertAmountsDto.java	(date 1709282214954)
+@@ -0,0 +1,91 @@
++package org.max.home.spoon;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++        "sourceAmount",
++        "sourceUnit",
++        "targetAmount",
++        "targetUnit",
++        "answer",
++        "type"
++})
++public class ConvertAmountsDto {
++
++    @JsonProperty("sourceAmount")
++    private Double sourceAmount;
++    @JsonProperty("sourceUnit")
++    private String sourceUnit;
++    @JsonProperty("targetAmount")
++    private Double targetAmount;
++    @JsonProperty("targetUnit")
++    private String targetUnit;
++    @JsonProperty("answer")
++    private String answer;
++    @JsonProperty("type")
++    private String type;
++
++    @JsonProperty("sourceAmount")
++    public Double getSourceAmount() {
++        return sourceAmount;
++    }
++
++    @JsonProperty("sourceAmount")
++    public void setSourceAmount(Double sourceAmount) {
++        this.sourceAmount = sourceAmount;
++    }
++
++    @JsonProperty("sourceUnit")
++    public String getSourceUnit() {
++        return sourceUnit;
++    }
++
++    @JsonProperty("sourceUnit")
++    public void setSourceUnit(String sourceUnit) {
++        this.sourceUnit = sourceUnit;
++    }
++
++    @JsonProperty("targetAmount")
++    public Double getTargetAmount() {
++        return targetAmount;
++    }
++
++    @JsonProperty("targetAmount")
++    public void setTargetAmount(Double targetAmount) {
++        this.targetAmount = targetAmount;
++    }
++
++    @JsonProperty("targetUnit")
++    public String getTargetUnit() {
++        return targetUnit;
++    }
++
++    @JsonProperty("targetUnit")
++    public void setTargetUnit(String targetUnit) {
++        this.targetUnit = targetUnit;
++    }
++
++    @JsonProperty("answer")
++    public String getAnswer() {
++        return answer;
++    }
++
++    @JsonProperty("answer")
++    public void setAnswer(String answer) {
++        this.answer = answer;
++    }
++
++    @JsonProperty("type")
++    public String getType() {
++        return type;
++    }
++
++    @JsonProperty("type")
++    public void setType(String type) {
++        this.type = type;
++    }
++
++}
+Index: src/main/java/org/max/home/spoon/SimilarRecipesDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/spoon/SimilarRecipesDto.java b/src/main/java/org/max/home/spoon/SimilarRecipesDto.java
+new file mode 100644
+--- /dev/null	(date 1709282214955)
++++ b/src/main/java/org/max/home/spoon/SimilarRecipesDto.java	(date 1709282214955)
+@@ -0,0 +1,91 @@
++package org.max.home.spoon;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++        "id",
++        "imageType",
++        "title",
++        "readyInMinutes",
++        "servings",
++        "sourceUrl"
++})
++public class SimilarRecipesDto {
++
++    @JsonProperty("id")
++    private Integer id;
++    @JsonProperty("imageType")
++    private String imageType;
++    @JsonProperty("title")
++    private String title;
++    @JsonProperty("readyInMinutes")
++    private Integer readyInMinutes;
++    @JsonProperty("servings")
++    private Integer servings;
++    @JsonProperty("sourceUrl")
++    private String sourceUrl;
++
++    @JsonProperty("id")
++    public Integer getId() {
++        return id;
++    }
++
++    @JsonProperty("id")
++    public void setId(Integer id) {
++        this.id = id;
++    }
++
++    @JsonProperty("imageType")
++    public String getImageType() {
++        return imageType;
++    }
++
++    @JsonProperty("imageType")
++    public void setImageType(String imageType) {
++        this.imageType = imageType;
++    }
++
++    @JsonProperty("title")
++    public String getTitle() {
++        return title;
++    }
++
++    @JsonProperty("title")
++    public void setTitle(String title) {
++        this.title = title;
++    }
++
++    @JsonProperty("readyInMinutes")
++    public Integer getReadyInMinutes() {
++        return readyInMinutes;
++    }
++
++    @JsonProperty("readyInMinutes")
++    public void setReadyInMinutes(Integer readyInMinutes) {
++        this.readyInMinutes = readyInMinutes;
++    }
++
++    @JsonProperty("servings")
++    public Integer getServings() {
++        return servings;
++    }
++
++    @JsonProperty("servings")
++    public void setServings(Integer servings) {
++        this.servings = servings;
++    }
++
++    @JsonProperty("sourceUrl")
++    public String getSourceUrl() {
++        return sourceUrl;
++    }
++
++    @JsonProperty("sourceUrl")
++    public void setSourceUrl(String sourceUrl) {
++        this.sourceUrl = sourceUrl;
++    }
++
++}
+Index: src/main/java/org/max/home/accu/weather/DailyForecast.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/accu/weather/DailyForecast.java b/src/main/java/org/max/home/accu/weather/DailyForecast.java
+new file mode 100644
+--- /dev/null	(date 1709282214952)
++++ b/src/main/java/org/max/home/accu/weather/DailyForecast.java	(date 1709282214952)
+@@ -0,0 +1,120 @@
++
++package org.max.home.accu.weather;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++import java.util.List;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "Date",
++    "EpochDate",
++    "Temperature",
++    "Day",
++    "Night",
++    "Sources",
++    "MobileLink",
++    "Link"
++})
++public class DailyForecast {
++
++    @JsonProperty("Date")
++    private String date;
++    @JsonProperty("EpochDate")
++    private Integer epochDate;
++    @JsonProperty("Temperature")
++    private Temperature temperature;
++    @JsonProperty("Day")
++    private Day day;
++    @JsonProperty("Night")
++    private Night night;
++    @JsonProperty("Sources")
++    private List<String> sources;
++    @JsonProperty("MobileLink")
++    private String mobileLink;
++    @JsonProperty("Link")
++    private String link;
++
++    @JsonProperty("Date")
++    public String getDate() {
++        return date;
++    }
++
++    @JsonProperty("Date")
++    public void setDate(String date) {
++        this.date = date;
++    }
++
++    @JsonProperty("EpochDate")
++    public Integer getEpochDate() {
++        return epochDate;
++    }
++
++    @JsonProperty("EpochDate")
++    public void setEpochDate(Integer epochDate) {
++        this.epochDate = epochDate;
++    }
++
++    @JsonProperty("Temperature")
++    public Temperature getTemperature() {
++        return temperature;
++    }
++
++    @JsonProperty("Temperature")
++    public void setTemperature(Temperature temperature) {
++        this.temperature = temperature;
++    }
++
++    @JsonProperty("Day")
++    public Day getDay() {
++        return day;
++    }
++
++    @JsonProperty("Day")
++    public void setDay(Day day) {
++        this.day = day;
++    }
++
++    @JsonProperty("Night")
++    public Night getNight() {
++        return night;
++    }
++
++    @JsonProperty("Night")
++    public void setNight(Night night) {
++        this.night = night;
++    }
++
++    @JsonProperty("Sources")
++    public List<String> getSources() {
++        return sources;
++    }
++
++    @JsonProperty("Sources")
++    public void setSources(List<String> sources) {
++        this.sources = sources;
++    }
++
++    @JsonProperty("MobileLink")
++    public String getMobileLink() {
++        return mobileLink;
++    }
++
++    @JsonProperty("MobileLink")
++    public void setMobileLink(String mobileLink) {
++        this.mobileLink = mobileLink;
++    }
++
++    @JsonProperty("Link")
++    public String getLink() {
++        return link;
++    }
++
++    @JsonProperty("Link")
++    public void setLink(String link) {
++        this.link = link;
++    }
++
++}
+Index: src/main/java/org/max/seminar/accu/location/Country.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/seminar/accu/location/Country.java b/src/main/java/org/max/seminar/accu/location/Country.java
+new file mode 100644
+--- /dev/null	(date 1709282214956)
++++ b/src/main/java/org/max/seminar/accu/location/Country.java	(date 1709282214956)
+@@ -0,0 +1,40 @@
++
++package org.max.seminar.accu.location;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "ID",
++    "LocalizedName"
++})
++public class Country {
++
++    @JsonProperty("ID")
++    private String id;
++    @JsonProperty("LocalizedName")
++    private String localizedName;
++
++    @JsonProperty("ID")
++    public String getId() {
++        return id;
++    }
++
++    @JsonProperty("ID")
++    public void setId(String id) {
++        this.id = id;
++    }
++
++    @JsonProperty("LocalizedName")
++    public String getLocalizedName() {
++        return localizedName;
++    }
++
++    @JsonProperty("LocalizedName")
++    public void setLocalizedName(String localizedName) {
++        this.localizedName = localizedName;
++    }
++
++}
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+new file mode 100644
+--- /dev/null	(date 1709627267576)
++++ b/pom.xml	(date 1709627267576)
+@@ -0,0 +1,177 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>org.max</groupId>
++    <artifactId>auto</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <!-- Переменные -->
++    <properties>
++        <maven.compiler.source>17</maven.compiler.source>
++        <maven.compiler.target>17</maven.compiler.target>
++        <junit.version>5.7.2</junit.version>
++        <logback.version>1.3.5</logback.version>
++        <surefire-report.version>2.22.2</surefire-report.version>
++        <slf4j.version>2.0.4</slf4j.version>
++        <mockito.version>5.3.1</mockito.version>
++        <wiremock.version>1.58</wiremock.version>
++        <surefire.version>2.22.2</surefire.version>
++        <aspectj.version>1.8.10</aspectj.version>
++        <allure.junit.version>2.22.1</allure.junit.version>
++        <assured.version>5.3.0</assured.version>
++        <jackson.version>2.15.0</jackson.version>
++    </properties>
++
++    <!-- Архивирование -->
++    <packaging>jar</packaging>
++
++    <name>Демо проект</name>
++    <description>Демонстрационный проект для курса введения в автоматизацию</description>
++    <url>http://demo.max.org</url>
++
++    <!-- Зависимости -->
++    <dependencies>
++        <!-- Лекция 1.Зависимости junit -->
++        <dependency>
++            <groupId>org.junit.jupiter</groupId>
++            <artifactId>junit-jupiter-engine</artifactId>
++            <version>${junit.version}</version>
++            <scope>test</scope>
++        </dependency>
++        <dependency>
++            <groupId>org.junit.jupiter</groupId>
++            <artifactId>junit-jupiter-params</artifactId>
++            <version>${junit.version}</version>
++            <scope>test</scope>
++        </dependency>
++
++        <!-- Лекция 3. Jackson -->
++        <dependency>
++            <groupId>com.fasterxml.jackson.core</groupId>
++            <artifactId>jackson-databind</artifactId>
++            <version>${jackson.version}</version>
++        </dependency>
++
++        <!-- Лекция 5. Логирование -->
++        <dependency>
++            <groupId>ch.qos.logback</groupId>
++            <artifactId>logback-core</artifactId>
++            <version>${logback.version}</version>
++        </dependency>
++
++        <dependency>
++            <groupId>org.slf4j</groupId>
++            <artifactId>slf4j-api</artifactId>
++            <version>${slf4j.version}</version>
++        </dependency>
++
++        <dependency>
++            <groupId>ch.qos.logback</groupId>
++            <artifactId>logback-classic</artifactId>
++            <version>${logback.version}</version>
++        </dependency>
++
++        <!-- Лекция 5. Мокирование -->
++        <dependency>
++            <groupId>org.mockito</groupId>
++            <artifactId>mockito-core</artifactId>
++            <version>${mockito.version}</version>
++            <scope>test</scope>
++        </dependency>
++
++        <dependency>
++            <groupId>org.mockito</groupId>
++            <artifactId>mockito-junit-jupiter</artifactId>
++            <version>${mockito.version}</version>
++            <scope>test</scope>
++        </dependency>
++
++        <!-- Лекция 5. WireMock -->
++        <dependency>
++            <groupId>com.github.tomakehurst</groupId>
++            <artifactId>wiremock</artifactId>
++            <version>${wiremock.version}</version>
++  <!--          <scope>test</scope>-->
++        </dependency>
++
++        <!-- Лекция 6. Allure -->
++        <dependency>
++            <groupId>io.qameta.allure</groupId>
++            <artifactId>allure-junit5</artifactId>
++            <version>${allure.junit.version}</version>
++        </dependency>
++
++    </dependencies>
++
++    <!-- Сборка -->
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-compiler-plugin</artifactId>
++                <configuration>
++                    <source>17</source>
++                    <target>17</target>
++                </configuration>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-surefire-plugin</artifactId>
++                <version>${surefire.version}</version>
++            </plugin>
++
++            <plugin>
++                <artifactId>maven-surefire-plugin</artifactId>
++                <version>2.21.0</version>
++                <configuration>
++                    <testFailureIgnore>false</testFailureIgnore>
++                    <argLine>
++                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
++                    </argLine>
++                    <systemProperties>
++                        <property>
++                            <name>junit.jupiter.extensions.autodetection.enabled</name>
++                            <value>true</value>
++                        </property>
++                    </systemProperties>
++                </configuration>
++                <dependencies>
++                    <dependency>
++                        <groupId>org.junit.platform</groupId>
++                        <artifactId>junit-platform-surefire-provider</artifactId>
++                        <version>1.2.0</version>
++                    </dependency>
++                    <dependency>
++                        <groupId>org.aspectj</groupId>
++                        <artifactId>aspectjweaver</artifactId>
++                        <version>${aspectj.version}</version>
++                    </dependency>
++                </dependencies>
++            </plugin>
++            <plugin>
++                <groupId>io.qameta.allure</groupId>
++                <artifactId>allure-maven</artifactId>
++                <version>2.12.0</version>
++                <configuration>
++                    <!-- На момент написания лекции соответствующий архив не доступен,
++                    закомментируйте строку-->
++                    <!--<reportVersion>2.4.1</reportVersion>-->
++                    <!-- Добавим адрес директории для генератора отчета -->
++                    <buildDirectory>/Users/macbook/IdeaProjects/untitled</buildDirectory>
++                </configuration>
++            </plugin>
++        </plugins>
++    </build>
++
++    <!-- Репозитории -->
++    <repositories>
++        <repository>
++            <id>mvnrepository</id>
++            <url>https://mvnrepository.com/</url>
++        </repository>
++    </repositories>
++
++</project>
+\ No newline at end of file
+Index: src/main/java/org/max/seminar/spoon/ClassifyCuisineDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/seminar/spoon/ClassifyCuisineDTO.java b/src/main/java/org/max/seminar/spoon/ClassifyCuisineDTO.java
+new file mode 100644
+--- /dev/null	(date 1709282214958)
++++ b/src/main/java/org/max/seminar/spoon/ClassifyCuisineDTO.java	(date 1709282214958)
+@@ -0,0 +1,60 @@
++package org.max.seminar.spoon;
++
++import com.fasterxml.jackson.annotation.JsonIgnore;
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++import java.util.HashMap;
++import java.util.List;
++import java.util.Map;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++        "cuisine",
++        "cuisines",
++        "confidence"
++})
++public class ClassifyCuisineDTO {
++
++    @JsonProperty("cuisine")
++    private String cuisine;
++    @JsonProperty("cuisines")
++    private List<String> cuisines = null;
++    @JsonProperty("confidence")
++    private Double confidence;
++    @JsonIgnore
++    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
++
++    public String getCuisine() {
++        return cuisine;
++    }
++
++    public void setCuisine(String cuisine) {
++        this.cuisine = cuisine;
++    }
++
++    public List<String> getCuisines() {
++        return cuisines;
++    }
++
++    public void setCuisines(List<String> cuisines) {
++        this.cuisines = cuisines;
++    }
++
++    public Double getConfidence() {
++        return confidence;
++    }
++
++    public void setConfidence(Double confidence) {
++        this.confidence = confidence;
++    }
++
++    public Map<String, Object> getAdditionalProperties() {
++        return additionalProperties;
++    }
++
++    public void setAdditionalProperties(Map<String, Object> additionalProperties) {
++        this.additionalProperties = additionalProperties;
++    }
++}
+Index: src/main/java/org/max/seminar/accu/location/Location.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/seminar/accu/location/Location.java b/src/main/java/org/max/seminar/accu/location/Location.java
+new file mode 100644
+--- /dev/null	(date 1709282214957)
++++ b/src/main/java/org/max/seminar/accu/location/Location.java	(date 1709282214957)
+@@ -0,0 +1,105 @@
++
++package org.max.seminar.accu.location;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "Version",
++    "Key",
++    "Type",
++    "Rank",
++    "LocalizedName",
++    "Country",
++    "AdministrativeArea"
++})
++public class Location {
++
++    @JsonProperty("Version")
++    private Integer version;
++    @JsonProperty("Key")
++    private String key;
++    @JsonProperty("Type")
++    private String type;
++    @JsonProperty("Rank")
++    private Integer rank;
++    @JsonProperty("LocalizedName")
++    private String localizedName;
++    @JsonProperty("Country")
++    private Country country;
++    @JsonProperty("AdministrativeArea")
++    private AdministrativeArea administrativeArea;
++
++    @JsonProperty("Version")
++    public Integer getVersion() {
++        return version;
++    }
++
++    @JsonProperty("Version")
++    public void setVersion(Integer version) {
++        this.version = version;
++    }
++
++    @JsonProperty("Key")
++    public String getKey() {
++        return key;
++    }
++
++    @JsonProperty("Key")
++    public void setKey(String key) {
++        this.key = key;
++    }
++
++    @JsonProperty("Type")
++    public String getType() {
++        return type;
++    }
++
++    @JsonProperty("Type")
++    public void setType(String type) {
++        this.type = type;
++    }
++
++    @JsonProperty("Rank")
++    public Integer getRank() {
++        return rank;
++    }
++
++    @JsonProperty("Rank")
++    public void setRank(Integer rank) {
++        this.rank = rank;
++    }
++
++    @JsonProperty("LocalizedName")
++    public String getLocalizedName() {
++        return localizedName;
++    }
++
++    @JsonProperty("LocalizedName")
++    public void setLocalizedName(String localizedName) {
++        this.localizedName = localizedName;
++    }
++
++    @JsonProperty("Country")
++    public Country getCountry() {
++        return country;
++    }
++
++    @JsonProperty("Country")
++    public void setCountry(Country country) {
++        this.country = country;
++    }
++
++    @JsonProperty("AdministrativeArea")
++    public AdministrativeArea getAdministrativeArea() {
++        return administrativeArea;
++    }
++
++    @JsonProperty("AdministrativeArea")
++    public void setAdministrativeArea(AdministrativeArea administrativeArea) {
++        this.administrativeArea = administrativeArea;
++    }
++
++}
+Index: src/main/java/org/max/seminar/accu/location/AdministrativeArea.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/seminar/accu/location/AdministrativeArea.java b/src/main/java/org/max/seminar/accu/location/AdministrativeArea.java
+new file mode 100644
+--- /dev/null	(date 1709282214956)
++++ b/src/main/java/org/max/seminar/accu/location/AdministrativeArea.java	(date 1709282214956)
+@@ -0,0 +1,40 @@
++
++package org.max.seminar.accu.location;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "ID",
++    "LocalizedName"
++})
++public class AdministrativeArea {
++
++    @JsonProperty("ID")
++    private String id;
++    @JsonProperty("LocalizedName")
++    private String localizedName;
++
++    @JsonProperty("ID")
++    public String getId() {
++        return id;
++    }
++
++    @JsonProperty("ID")
++    public void setId(String id) {
++        this.id = id;
++    }
++
++    @JsonProperty("LocalizedName")
++    public String getLocalizedName() {
++        return localizedName;
++    }
++
++    @JsonProperty("LocalizedName")
++    public void setLocalizedName(String localizedName) {
++        this.localizedName = localizedName;
++    }
++
++}
+Index: src/main/resources/logback.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/logback.xml b/src/main/resources/logback.xml
+new file mode 100644
+--- /dev/null	(date 1709534909178)
++++ b/src/main/resources/logback.xml	(date 1709534909178)
+@@ -0,0 +1,28 @@
++<configuration>
++    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
++        <encoder>
++            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
++        </encoder>
++    </appender>
++    <property name="LOG_DIR" value="C:\Users\macbook\Automatisation-Seminar-5\IdeaProjects\auto\src\main\resources" />
++    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
++        <file>${LOG_DIR}/tests.log</file>
++        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
++            <!-- daily rollover -->
++            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.gz</fileNamePattern>
++
++            <!-- keep 30 days' worth of history capped at 3GB total size -->
++            <maxHistory>30</maxHistory>
++            <totalSizeCap>3GB</totalSizeCap>
++        </rollingPolicy>
++        <append>true</append>
++        <encoder>
++            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
++        </encoder>
++    </appender>
++
++    <root level="debug">
++        <appender-ref ref="STDOUT" />
++        <appender-ref ref="FILE" />
++    </root>
++</configuration>
+\ No newline at end of file
+Index: src/main/java/org/max/seminar/spoon/IngredientSubstitutesDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/seminar/spoon/IngredientSubstitutesDto.java b/src/main/java/org/max/seminar/spoon/IngredientSubstitutesDto.java
+new file mode 100644
+--- /dev/null	(date 1709282214960)
++++ b/src/main/java/org/max/seminar/spoon/IngredientSubstitutesDto.java	(date 1709282214960)
+@@ -0,0 +1,69 @@
++package org.max.seminar.spoon;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++import javax.annotation.processing.Generated;
++import java.util.List;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++        "status",
++        "ingredient",
++        "substitutes",
++        "message"
++})
++@Generated("jsonschema2pojo")
++public class IngredientSubstitutesDto {
++
++    @JsonProperty("status")
++    private String status;
++    @JsonProperty("ingredient")
++    private String ingredient;
++    @JsonProperty("substitutes")
++    private List<String> substitutes;
++    @JsonProperty("message")
++    private String message;
++
++    @JsonProperty("status")
++    public String getStatus() {
++        return status;
++    }
++
++    @JsonProperty("status")
++    public void setStatus(String status) {
++        this.status = status;
++    }
++
++    @JsonProperty("ingredient")
++    public String getIngredient() {
++        return ingredient;
++    }
++
++    @JsonProperty("ingredient")
++    public void setIngredient(String ingredient) {
++        this.ingredient = ingredient;
++    }
++
++    @JsonProperty("substitutes")
++    public List<String> getSubstitutes() {
++        return substitutes;
++    }
++
++    @JsonProperty("substitutes")
++    public void setSubstitutes(List<String> substitutes) {
++        this.substitutes = substitutes;
++    }
++
++    @JsonProperty("message")
++    public String getMessage() {
++        return message;
++    }
++
++    @JsonProperty("message")
++    public void setMessage(String message) {
++        this.message = message;
++    }
++
++}
+Index: src/main/java/org/max/RunWireMock.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/RunWireMock.java b/src/main/java/org/max/RunWireMock.java
+new file mode 100644
+--- /dev/null	(date 1709282214951)
++++ b/src/main/java/org/max/RunWireMock.java	(date 1709282214951)
+@@ -0,0 +1,24 @@
++package org.max;
++
++import com.github.tomakehurst.wiremock.WireMockServer;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++
++/**
++ * Демо для демонстрации запуска сервиса
++ */
++public class RunWireMock {
++
++    public static void main(String[] args) {
++        WireMockServer wireMockServer = new WireMockServer();
++        wireMockServer.start();
++        configureFor("localhost", 8080);
++
++        stubFor(get(urlEqualTo("/test/urlequal")).willReturn(aResponse().withBody("Welcome to test!")));
++
++        //бесконечный цикл
++        while (true) {
++
++        }
++    }
++}
+Index: src/test/java/org/max/demo/WireMockTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/demo/WireMockTest.java b/src/test/java/org/max/demo/WireMockTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214964)
++++ b/src/test/java/org/max/demo/WireMockTest.java	(date 1709282214964)
+@@ -0,0 +1,163 @@
++package org.max.demo;
++
++import com.github.tomakehurst.wiremock.WireMockServer;
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.client.methods.HttpPost;
++import org.apache.http.entity.StringEntity;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.AfterAll;
++import org.junit.jupiter.api.BeforeAll;
++import org.junit.jupiter.api.Test;
++
++import java.io.IOException;
++import java.io.InputStream;
++import java.util.Scanner;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++/**
++ * Демонстрация работы библиотеки WireMock
++ */
++public class WireMockTest {
++
++
++    static WireMockServer wireMockServer = new WireMockServer();
++
++    //Инициализация http сервера
++    @BeforeAll
++    static void startServer() {
++        wireMockServer.start();
++        configureFor("localhost", 8080);
++    }
++
++    //Демонстрация совпадения url
++    @Test
++    void testUrlEqual() throws IOException {
++        //given
++        stubFor(get(urlEqualTo("/test/urlequal")).willReturn(aResponse().withBody("Welcome to test!")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet("http://localhost:8080/test/urlequal");
++        //when
++        HttpResponse httpResponse = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlEqualTo("/test/urlequal")));
++        assertEquals(200, httpResponse.getStatusLine().getStatusCode());
++        assertEquals("Welcome to test!", convertResponseToString(httpResponse));
++    }
++
++    //Демонстрация совпадения url по маске
++    @Test
++    void testURLMatching() throws IOException {
++        //given
++        stubFor(get(urlPathMatching("/test/urlmatching/.*"))
++                .willReturn(aResponse()
++                        .withStatus(200)
++                        .withHeader("Content-Type", "application/json")
++                        .withBody("\"library\": \"WireMock\"")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet("http://localhost:8080/test/urlmatching/wiremock");
++        //when
++        HttpResponse httpResponse = httpClient.execute(request);
++        String stringResponse = convertResponseToString(httpResponse);
++        //then
++        verify(getRequestedFor(urlEqualTo("/test/urlmatching/wiremock")));
++        assertEquals(200, httpResponse.getStatusLine().getStatusCode());
++        assertEquals("application/json", httpResponse.getFirstHeader("Content-Type").getValue());
++        assertEquals("\"library\": \"WireMock\"", stringResponse);
++    }
++
++    //Демонстрация совпадения header
++    @Test
++    void testHeaderMatching() throws IOException {
++        //given
++        stubFor(get(urlPathEqualTo("/test/headermatching/wiremock"))
++                .withHeader("Accept", matching("text/.*"))
++                .willReturn(aResponse()
++                        .withStatus(503)
++                        .withHeader("Content-Type", "text/html")
++                        .withBody("503 Service Unavailable")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet("http://localhost:8080/test/headermatching/wiremock");
++        request.addHeader("Accept", "text/html");
++
++        //when
++        HttpResponse httpResponse = httpClient.execute(request);
++        String stringResponse = convertResponseToString(httpResponse);
++        //then
++        verify(getRequestedFor(urlEqualTo("/test/headermatching/wiremock")));
++        assertEquals(503, httpResponse.getStatusLine().getStatusCode());
++        assertEquals("text/html", httpResponse.getFirstHeader("Content-Type").getValue());
++        assertEquals("503 Service Unavailable", stringResponse);
++    }
++
++    //Демонстрация совпадения body
++    @Test
++    void testBodyMatching() throws IOException {
++        //given
++        stubFor(post(urlEqualTo("/test/bodymatching/wiremock"))
++                .withHeader("Content-Type", equalTo("application/json"))
++                .withRequestBody(containing("\"library\": \"WireMock\""))
++                .withRequestBody(containing("\"creator\": \"GB\""))
++                .willReturn(aResponse()
++                        .withStatus(200)));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpPost request = new HttpPost("http://localhost:8080/test/bodymatching/wiremock");
++        request.addHeader("Content-Type", "application/json");
++        request.setEntity(new StringEntity("{\n" +
++                "    \"library\": \"WireMock\",\n" +
++                "    \"creator\": \"GB\"\n" +
++                "}"));
++
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(postRequestedFor(urlEqualTo("/test/bodymatching/wiremock"))
++                .withHeader("Content-Type", equalTo("application/json")));
++        assertEquals(200, response.getStatusLine().getStatusCode());
++    }
++
++    //Демонстрация приоритета при определении мок ответа
++    @Test
++    void testPriority() throws IOException {
++        //given
++        stubFor(get(urlPathMatching("/test/priority/.*"))
++                .atPriority(1)
++                .willReturn(aResponse()
++                        .withStatus(200)));
++        stubFor(get(urlPathEqualTo("/test/priority/wiremock"))
++                .atPriority(2)
++                .withHeader("Accept", matching("text/.*"))
++                .willReturn(aResponse()
++                        .withStatus(503)));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet("http://localhost:8080/test/priority/wiremock");
++        request.addHeader("Accept", "text/xml");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlEqualTo("/test/priority/wiremock")));
++        assertEquals(200, response.getStatusLine().getStatusCode());
++    }
++
++    //Остановка http сервиса
++    @AfterAll
++    static void stopServer() {
++        wireMockServer.stop();
++    }
++
++    //Вспомогательный метод - конвертор body to string
++    private String convertResponseToString(HttpResponse response) throws IOException {
++
++        try(InputStream responseStream = response.getEntity().getContent();
++            Scanner scanner = new Scanner(responseStream, "UTF-8");) {
++            String responseString = scanner.useDelimiter("\\Z").next();
++            return responseString;
++        }
++
++
++
++    }
++}
+Index: src/test/java/org/max/demo/LogbackExampleTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/demo/LogbackExampleTest.java b/src/test/java/org/max/demo/LogbackExampleTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214962)
++++ b/src/test/java/org/max/demo/LogbackExampleTest.java	(date 1709282214962)
+@@ -0,0 +1,37 @@
++package org.max.demo;
++
++import org.junit.jupiter.api.Test;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++/**
++ * Демонстрация работы библиотеки логирования
++ */
++public class LogbackExampleTest {
++
++    //Создание объекта Logger
++    private static final Logger logger
++            = LoggerFactory.getLogger(LogbackExampleTest.class);
++
++    //генерация лог сообщения
++    @Test
++    void simpleExampleTest() {
++        logger.info("Example log from " + LogbackExampleTest.class.getSimpleName());
++        logger.info("log String value to console");
++    }
++
++    //генерация лог сообщения с параметрами
++    @Test
++    void parametrizedMessageTest() {
++        String message = "This is a String";
++        Integer zero = 0;
++
++        try {
++            logger.debug("Logging message: {}", message);
++            logger.debug("Going to divide {} by {}", 42, zero);
++            int result = 42 / zero;
++        } catch (Exception e) {
++            logger.error("Error dividing {} by {} ", 42, zero, e);
++        }
++    }
++}
+Index: src/test/java/org/max/demo/TriangleTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/demo/TriangleTest.java b/src/test/java/org/max/demo/TriangleTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214963)
++++ b/src/test/java/org/max/demo/TriangleTest.java	(date 1709282214963)
+@@ -0,0 +1,81 @@
++package org.max.demo;
++
++import org.junit.jupiter.api.Assertions;
++import org.junit.jupiter.api.Test;
++import org.junit.jupiter.api.extension.ExtendWith;
++import org.mockito.Mock;
++import org.mockito.Mockito;
++import org.mockito.junit.jupiter.MockitoExtension;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import static org.mockito.ArgumentMatchers.*;
++import static org.mockito.Mockito.times;
++
++/**
++ * Демонстрация мокирования на примере задачи вычисления площади треугольника
++ */
++@ExtendWith(MockitoExtension.class)
++public class TriangleTest {
++
++    //Создание объекта Logger
++    private static final Logger logger
++            = LoggerFactory.getLogger(TriangleTest.class);
++
++    //Демо тест без мокирования
++    @Test
++    void testWithoutMock() throws NotTriangleException {
++        //given
++        Triangle triangle = new Triangle();
++        //when
++        //then
++        Assertions.assertEquals(6,triangle.square(3,4,5));
++        Assertions.assertThrows(NotTriangleException.class, () -> triangle.square(0,4,5));
++        Assertions.assertThrows(NotTriangleException.class, () -> triangle.square(2,-2,5));
++        Assertions.assertThrows(NotTriangleException.class, () -> triangle.square(2,4,100));
++    }
++
++    @Mock
++    Triangle triangleMock = new Triangle();
++
++    //Определение результа поведения мок метода
++    @Test
++    void testMockWhen() {
++        //given
++        Mockito.when(triangleMock.getSquare(anyInt(),anyInt(),anyInt())).thenReturn(100d);
++        //when
++        //then
++        Assertions.assertEquals(100d, triangleMock.getSquare(100,100,100));
++        Assertions.assertEquals(100d, triangleMock.getSquare(2,4,100));
++        Assertions.assertEquals(100d, triangleMock.getSquare(0,-2,5));
++
++        Mockito.verify(triangleMock, times(3)).getSquare(anyInt(),anyInt(),anyInt());
++        Mockito.verifyNoMoreInteractions(triangleMock);
++    }
++
++    //Определение результа поведения мок метода - Exception
++    @Test
++    void testMockThrow() throws NotTriangleException {
++        //given
++        Mockito.doThrow(NotTriangleException.class).when(triangleMock).square(anyInt(),anyInt(),anyInt());
++        //when
++        //then
++       Assertions.assertThrows(NotTriangleException.class, () -> triangleMock.square(0,4,5));
++
++    }
++
++    //Демонстрация работы функции doAnswer
++    @Test
++    void testMockAnswer(){
++        //given
++        Mockito.doAnswer(invocation -> {
++            double result = (Integer)invocation.getArgument(0) *
++                    (Integer)invocation.getArgument(1) *
++                    (Integer)invocation.getArgument(2);
++            return result;
++        }).when(triangleMock).getSquare(3,4,5);
++        //when
++        //then
++        Assertions.assertEquals(60, triangleMock.getSquare(3,4,5));
++    }
++}
+Index: src/test/java/org/max/home/accu/AbstractTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/home/accu/AbstractTest.java b/src/test/java/org/max/home/accu/AbstractTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214964)
++++ b/src/test/java/org/max/home/accu/AbstractTest.java	(date 1709282214964)
+@@ -0,0 +1,53 @@
++package org.max.home.accu;
++
++import com.github.tomakehurst.wiremock.WireMockServer;
++import org.apache.http.HttpResponse;
++import org.junit.jupiter.api.AfterAll;
++import org.junit.jupiter.api.BeforeAll;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.io.InputStream;
++import java.util.Scanner;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.configureFor;
++
++public class AbstractTest {
++
++    private static WireMockServer wireMockServer = new WireMockServer();
++    private static final int port = 8080;
++    private static String baseUrl;
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(AbstractTest.class);
++
++    @BeforeAll
++    static void startServer() {
++        baseUrl = "http://localhost:" + port;
++        wireMockServer.start();
++        configureFor("localhost", port);
++        logger.info("Start WireMockServer on port {}",port);
++    }
++
++    @AfterAll
++    static void stopServer() {
++        wireMockServer.stop();
++        logger.info("Stop WireMockServer");
++    }
++
++    //Вспомогательный метод - конвертор body to string
++    public String convertResponseToString(HttpResponse response) throws IOException {
++        logger.debug("convertResponseToString method call");
++        try(InputStream responseStream = response.getEntity().getContent();
++            Scanner scanner = new Scanner(responseStream, "UTF-8");) {
++            String responseString = scanner.useDelimiter("\\Z").next();
++            return responseString;
++        }
++
++    }
++
++    public static String getBaseUrl() {
++        return baseUrl;
++    }
++}
+Index: src/test/java/org/max/demo/MockitoExampleTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/demo/MockitoExampleTest.java b/src/test/java/org/max/demo/MockitoExampleTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214963)
++++ b/src/test/java/org/max/demo/MockitoExampleTest.java	(date 1709282214963)
+@@ -0,0 +1,66 @@
++package org.max.demo;
++
++import org.junit.jupiter.api.Test;
++import org.junit.jupiter.api.extension.ExtendWith;
++import org.mockito.Mock;
++import org.mockito.Mockito;
++import org.mockito.Spy;
++import org.mockito.junit.jupiter.MockitoExtension;
++
++import java.util.ArrayList;
++import java.util.HashMap;
++import java.util.List;
++
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++/**
++ * Демонстрация работы библиотеки мокирования
++ */
++@ExtendWith(MockitoExtension.class)
++public class MockitoExampleTest {
++
++    @Mock
++    HashMap<String, String> hashMapMock = new HashMap<>();
++
++    //Работа с mock объектами
++    @Test
++    void simpleMockTest() {
++
++        List mockList = Mockito.mock(ArrayList.class);
++
++        mockList.add("one");
++        Mockito.verify(mockList).add("one");
++        assertEquals(0, mockList.size());
++
++        Mockito.when(mockList.size()).thenReturn(100);
++        assertEquals(100, mockList.size());
++
++        hashMapMock.put("one", "two");
++        Mockito.verify(hashMapMock, Mockito.times(1)).put("one", "two");
++        Mockito.when(hashMapMock.size()).thenReturn(200);
++        assertEquals(200, hashMapMock.size());
++    }
++
++    @Spy
++    HashMap<String, String> hashMapSpy = new HashMap<>();
++
++    //Демонстрация работы со SPY объектами
++    @Test
++    void simpleSpyTest() {
++
++        List mockList = Mockito.spy(ArrayList.class);
++
++        mockList.add("one");
++        Mockito.verify(mockList).add("one");
++        assertEquals(1, mockList.size());
++
++        Mockito.when(mockList.size()).thenReturn(100);
++        assertEquals(100, mockList.size());
++
++        hashMapSpy.put("one", "two");
++        Mockito.verify(hashMapSpy, Mockito.times(1)).put("one", "two");
++        assertEquals(1, hashMapSpy.size());
++        Mockito.when(hashMapSpy.size()).thenReturn(200);
++        assertEquals(200, hashMapSpy.size());
++    }
++}
+Index: src/test/java/org/max/home/accu/GetWeatherTenDaysTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/home/accu/GetWeatherTenDaysTest.java b/src/test/java/org/max/home/accu/GetWeatherTenDaysTest.java
+new file mode 100644
+--- /dev/null	(date 1709539361666)
++++ b/src/test/java/org/max/home/accu/GetWeatherTenDaysTest.java	(date 1709539361666)
+@@ -0,0 +1,84 @@
++package org.max.home.accu;
++
++import com.fasterxml.jackson.databind.ObjectMapper;
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.Test;
++import org.max.home.accu.weather.DailyForecast;
++import org.max.home.accu.weather.Headline;
++import org.max.home.accu.weather.Weather;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.net.URISyntaxException;
++import java.util.ArrayList;
++import java.util.List;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class GetWeatherTenDaysTest extends AbstractTest{
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(GetWeatherTenDaysTest.class);
++
++    @Test
++    void get_shouldReturn200() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 200 запущен");
++        //given
++        ObjectMapper mapper = new ObjectMapper();
++        Weather weather = new Weather();
++        Headline headline = new Headline();
++        headline.setCategory("Категория");
++        headline.setText("Текст");
++        weather.setHeadline(headline);
++        DailyForecast dailyForecast = new DailyForecast();
++        List<DailyForecast> dailyForecasts = new ArrayList<>();
++        dailyForecasts.add(dailyForecast);
++        weather.setDailyForecasts(dailyForecasts);
++
++        logger.debug("Формирование мока для GET /forecasts/v1/daily/10day/294021");
++        stubFor(get(urlPathEqualTo("/forecasts/v1/daily/10day/294021"))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(weather))));
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++
++        HttpGet request = new HttpGet(getBaseUrl() + "/forecasts/v1/daily/10day/294021");
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/forecasts/v1/daily/10day/294021")));
++        assertEquals(200, response.getStatusLine().getStatusCode());
++
++        Weather responseBody = mapper.readValue(response.getEntity().getContent(), Weather.class);
++        assertEquals("Категория", responseBody.getHeadline().getCategory());
++        assertEquals("Текст", responseBody.getHeadline().getText());
++        assertEquals(1, responseBody.getDailyForecasts().size());
++    }
++
++
++
++    @Test
++    void get_shouldReturn404() throws IOException {
++        logger.info("Тест код ответ 404 запущен");
++        //given
++        logger.debug("Формирование мока для GET /forecasts/v1/daily/11day/294021");
++        stubFor(get(urlPathEqualTo("/forecasts/v1/daily/11day/294021"))
++                .willReturn(aResponse()
++                        .withStatus(404).withBody("ERROR")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet(getBaseUrl()+"/forecasts/v1/daily/11day/294021");
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/forecasts/v1/daily/11day/294021")));
++        assertEquals(404, response.getStatusLine().getStatusCode());
++//        assertEquals("ERROR", convertResponseToString(response));
++    }
++}
+Index: src/test/java/org/max/home/accu/GetWeatherOneDayTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/home/accu/GetWeatherOneDayTest.java b/src/test/java/org/max/home/accu/GetWeatherOneDayTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214965)
++++ b/src/test/java/org/max/home/accu/GetWeatherOneDayTest.java	(date 1709282214965)
+@@ -0,0 +1,84 @@
++package org.max.home.accu;
++
++import com.fasterxml.jackson.databind.ObjectMapper;
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.client.utils.URIBuilder;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.Test;
++import org.max.home.accu.weather.DailyForecast;
++import org.max.home.accu.weather.Headline;
++import org.max.home.accu.weather.Weather;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.net.URI;
++import java.net.URISyntaxException;
++import java.util.ArrayList;
++import java.util.List;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class GetWeatherOneDayTest extends AbstractTest{
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(GetWeatherOneDayTest.class);
++
++    @Test
++    void get_shouldReturn200() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 200 запущен");
++        //given
++        ObjectMapper mapper = new ObjectMapper();
++        Weather weather = new Weather();
++        Headline headline = new Headline();
++        headline.setCategory("Категория");
++        headline.setText("Текст");
++        weather.setHeadline(headline);
++        DailyForecast dailyForecast = new DailyForecast();
++        List<DailyForecast> dailyForecasts = new ArrayList<>();
++        dailyForecasts.add(dailyForecast);
++        weather.setDailyForecasts(dailyForecasts);
++
++        logger.debug("Формирование мока для GET /forecasts/v1/daily/1day/294021");
++        stubFor(get(urlPathEqualTo("/forecasts/v1/daily/1day/294021"))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(weather))));
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++
++        HttpGet request = new HttpGet(getBaseUrl() + "/forecasts/v1/daily/1day/294021");
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/forecasts/v1/daily/1day/294021")));
++        assertEquals(200, response.getStatusLine().getStatusCode());
++
++        Weather responseBody = mapper.readValue(response.getEntity().getContent(), Weather.class);
++        assertEquals("Категория", responseBody.getHeadline().getCategory());
++        assertEquals("Текст", responseBody.getHeadline().getText());
++        assertEquals(1, responseBody.getDailyForecasts().size());
++    }
++
++    @Test
++    void get_shouldReturn500() throws IOException {
++        logger.info("Тест код ответ 500 запущен");
++        //given
++        logger.debug("Формирование мока для GET /forecasts/v1/daily/2day/294021");
++        stubFor(get(urlPathEqualTo("/forecasts/v1/daily/2day/294021"))
++                .willReturn(aResponse()
++                        .withStatus(500).withBody("ERROR")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet(getBaseUrl()+"/forecasts/v1/daily/2day/294021");
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/forecasts/v1/daily/2day/294021")));
++        assertEquals(500, response.getStatusLine().getStatusCode());
++        assertEquals("ERROR", convertResponseToString(response));
++    }
++}
+Index: src/test/java/org/max/home/accu/GetWeatherFifeDayTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/home/accu/GetWeatherFifeDayTest.java b/src/test/java/org/max/home/accu/GetWeatherFifeDayTest.java
+new file mode 100644
+--- /dev/null	(date 1709539922816)
++++ b/src/test/java/org/max/home/accu/GetWeatherFifeDayTest.java	(date 1709539922816)
+@@ -0,0 +1,120 @@
++package org.max.home.accu;
++
++import com.fasterxml.jackson.databind.ObjectMapper;
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.Test;
++import org.max.home.accu.weather.DailyForecast;
++import org.max.home.accu.weather.Headline;
++import org.max.home.accu.weather.Maximum;
++import org.max.home.accu.weather.Weather;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.net.URISyntaxException;
++import java.util.ArrayList;
++import java.util.List;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class GetWeatherFifeDayTest extends AbstractTest{
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(GetWeatherFifeDayTest.class);
++
++    @Test
++    void get_shouldReturn200() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 200 запущен");
++        //given
++        ObjectMapper mapper = new ObjectMapper();
++        Weather weather = new Weather();
++        Headline headline = new Headline();
++        headline.setCategory("Категория");
++        headline.setText("Текст");
++        weather.setHeadline(headline);
++        DailyForecast dailyForecast = new DailyForecast();
++        List<DailyForecast> dailyForecasts = new ArrayList<>();
++        dailyForecasts.add(dailyForecast);
++        weather.setDailyForecasts(dailyForecasts);
++
++        logger.debug("Формирование мока для GET /forecasts/v1/daily/5day/294021");
++        stubFor(get(urlPathEqualTo("/forecasts/v1/daily/5day/294021"))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(weather))));
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++
++        HttpGet request = new HttpGet(getBaseUrl() + "/forecasts/v1/daily/5day/294021");
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/forecasts/v1/daily/5day/294021")));
++        assertEquals(200, response.getStatusLine().getStatusCode());
++
++        Weather responseBody = mapper.readValue(response.getEntity().getContent(), Weather.class);
++        assertEquals("Категория", responseBody.getHeadline().getCategory());
++        assertEquals("Текст", responseBody.getHeadline().getText());
++        assertEquals(1, responseBody.getDailyForecasts().size());
++    }
++
++    @Test
++    void get_shouldReturn400() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 400 запущен");
++        //given
++        ObjectMapper mapper = new ObjectMapper();
++        Weather weather = new Weather();
++        Headline headline = new Headline();
++        headline.setCategory("Категория");
++        headline.setText("Текст");
++        weather.setHeadline(headline);
++        DailyForecast dailyForecast = new DailyForecast();
++        List<DailyForecast> dailyForecasts = new ArrayList<>();
++        dailyForecasts.add(dailyForecast);
++        weather.setDailyForecasts(dailyForecasts);
++
++        logger.debug("Формирование мока для GET /forecasts/v1/daily/5day/294021");
++        stubFor(get(urlPathEqualTo("/forecasts/v1/daily/5day/294021"))
++                .willReturn(aResponse()
++                        .withStatus(400).withBody(mapper.writeValueAsString(weather))));
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++
++        HttpGet request = new HttpGet(getBaseUrl() + "/forecasts/v1/daily/5day/294021");
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/forecasts/v1/daily/5day/29")));
++        assertEquals(400, response.getStatusLine().getStatusCode());
++
++        Weather responseBody = mapper.readValue(response.getEntity().getContent(), Weather.class);
++        assertEquals("Категория", responseBody.getHeadline().getCategory());
++        assertEquals("Текст", responseBody.getHeadline().getText());
++        assertEquals(1, responseBody.getDailyForecasts().size());
++    }
++
++
++    @Test
++    void get_shouldReturn404() throws IOException {
++        logger.info("Тест код ответ 404 запущен");
++        //given
++        logger.debug("Формирование мока для GET /forecasts/v1/daily/6day/294021");
++        stubFor(get(urlPathEqualTo("/forecasts/v1/daily/2day/294021"))
++                .willReturn(aResponse()
++                        .withStatus(404).withBody("ERROR")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet(getBaseUrl()+"/forecasts/v1/daily/6day/294021");
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/forecasts/v1/daily/6day/294021")));
++        assertEquals(404, response.getStatusLine().getStatusCode());
++//        assertEquals("ERROR", convertResponseToString(response));
++    }
++}
+Index: src/test/java/org/max/home/spoon/SimilarRecipesTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/home/spoon/SimilarRecipesTest.java b/src/test/java/org/max/home/spoon/SimilarRecipesTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214966)
++++ b/src/test/java/org/max/home/spoon/SimilarRecipesTest.java	(date 1709282214966)
+@@ -0,0 +1,41 @@
++package org.max.home.spoon;
++
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.Test;
++import org.max.seminar.spoon.AbstractTest;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class SimilarRecipesTest extends AbstractTest {
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(SimilarRecipesTest.class);
++
++    @Test
++    void get_shouldReturn500() throws IOException {
++        logger.info("Тест код ответ 500 запущен");
++        //given
++        logger.debug("Формирование мока для GET /recipes/715538/similar");
++        stubFor(get(urlPathEqualTo("/recipes/715538/similar"))
++                .willReturn(aResponse()
++                        .withStatus(500).withBody("ERROR")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet(getBaseUrl()+"/recipes/715538/similar");
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/recipes/715538/similar")));
++        assertEquals(500, response.getStatusLine().getStatusCode());
++        assertEquals("ERROR", convertResponseToString(response));
++    }
++
++}
+\ No newline at end of file
+Index: src/test/java/org/max/home/spoon/AbstractTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/home/spoon/AbstractTest.java b/src/test/java/org/max/home/spoon/AbstractTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214965)
++++ b/src/test/java/org/max/home/spoon/AbstractTest.java	(date 1709282214965)
+@@ -0,0 +1,53 @@
++package org.max.home.spoon;
++
++import com.github.tomakehurst.wiremock.WireMockServer;
++import org.apache.http.HttpResponse;
++import org.junit.jupiter.api.AfterAll;
++import org.junit.jupiter.api.BeforeAll;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.io.InputStream;
++import java.util.Scanner;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.configureFor;
++
++public class AbstractTest {
++
++    private static WireMockServer wireMockServer = new WireMockServer();
++    private static final int port = 8080;
++    private static String baseUrl;
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(AbstractTest.class);
++
++    @BeforeAll
++    static void startServer() {
++        baseUrl = "http://localhost:" + port;
++        wireMockServer.start();
++        configureFor("localhost", port);
++        logger.info("Start WireMockServer on port {}",port);
++    }
++
++    @AfterAll
++    static void stopServer() {
++        wireMockServer.stop();
++        logger.info("Stop WireMockServer");
++    }
++
++    //Вспомогательный метод - конвертор body to string
++    public String convertResponseToString(HttpResponse response) throws IOException {
++        logger.debug("convertResponseToString method call");
++        try(InputStream responseStream = response.getEntity().getContent();
++            Scanner scanner = new Scanner(responseStream, "UTF-8");) {
++            String responseString = scanner.useDelimiter("\\Z").next();
++            return responseString;
++        }
++
++    }
++
++    public static String getBaseUrl() {
++        return baseUrl;
++    }
++}
+Index: src/test/java/org/max/home/spoon/ConvertAmountsTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/home/spoon/ConvertAmountsTest.java b/src/test/java/org/max/home/spoon/ConvertAmountsTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214966)
++++ b/src/test/java/org/max/home/spoon/ConvertAmountsTest.java	(date 1709282214966)
+@@ -0,0 +1,64 @@
++package org.max.home.spoon;
++
++import com.fasterxml.jackson.databind.ObjectMapper;
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.client.utils.URIBuilder;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.Test;
++import org.max.seminar.spoon.AbstractTest;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.net.URI;
++import java.net.URISyntaxException;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class ConvertAmountsTest extends AbstractTest {
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(ConvertAmountsTest.class);
++
++    @Test
++    void get_shouldReturn200() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 200 запущен");
++        //given
++        ObjectMapper mapper = new ObjectMapper();
++        ConvertAmountsDto bodyResponse = new ConvertAmountsDto();
++        bodyResponse.setAnswer("Answer");
++        bodyResponse.setSourceAmount(100d);
++        bodyResponse.setTargetAmount(200d);
++        bodyResponse.setType("Count");
++        bodyResponse.setTargetUnit("Soup");
++
++        logger.debug("Формирование мока для GET /recipes/convert");
++        stubFor(get(urlPathEqualTo("/recipes/convert"))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(bodyResponse))));
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++
++        HttpGet request = new HttpGet(getBaseUrl()+"/recipes/convert");
++        URI uri = new URIBuilder(request.getURI())
++                .addParameter("ingredientName", "flour")
++                .addParameter("sourceAmount", String.valueOf(2.5))
++                .addParameter("sourceUnit", "cups")
++                .addParameter("targetUnit", "grams")
++                .build();
++        request.setURI(uri);
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/recipes/convert")));
++        assertEquals(200, response.getStatusLine().getStatusCode());
++        assertEquals("Answer", mapper.readValue(response.getEntity().getContent(), ConvertAmountsDto.class).getAnswer());
++
++    }
++
++}
+Index: src/test/java/org/max/seminar/accu/GetLocationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/seminar/accu/GetLocationTest.java b/src/test/java/org/max/seminar/accu/GetLocationTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214967)
++++ b/src/test/java/org/max/seminar/accu/GetLocationTest.java	(date 1709282214967)
+@@ -0,0 +1,102 @@
++package org.max.seminar.accu;
++
++import com.fasterxml.jackson.databind.ObjectMapper;
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.client.utils.URIBuilder;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.Test;
++import org.max.seminar.accu.location.Location;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.net.URI;
++import java.net.URISyntaxException;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static com.github.tomakehurst.wiremock.client.WireMock.urlPathEqualTo;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class GetLocationTest extends AbstractTest{
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(GetLocationTest.class);
++
++    @Test
++    void get_shouldReturn200() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 200 запущен");
++        //given
++        ObjectMapper mapper = new ObjectMapper();
++        Location bodyOk = new Location();
++        bodyOk.setKey("OK");
++
++        Location bodyError = new Location();
++        bodyError.setKey("Error");
++
++        logger.debug("Формирование мока для GET /locations/v1/cities/autocomplete");
++        stubFor(get(urlPathEqualTo("/locations/v1/cities/autocomplete"))
++                .withQueryParam("q", equalTo("Samara"))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(bodyOk))));
++
++        stubFor(get(urlPathEqualTo("/locations/v1/cities/autocomplete"))
++                .withQueryParam("q", equalTo("error"))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(bodyError))));
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        logger.debug("http клиент создан");
++        //when
++
++        HttpGet request = new HttpGet(getBaseUrl()+"/locations/v1/cities/autocomplete");
++        URI uriOk = new URIBuilder(request.getURI())
++                .addParameter("q", "Samara")
++                .build();
++        request.setURI(uriOk);
++        HttpResponse responseOk = httpClient.execute(request);
++
++        URI uriError = new URIBuilder(request.getURI())
++                .addParameter("q", "error")
++                .build();
++        request.setURI(uriError);
++
++        HttpResponse responseError = httpClient.execute(request);
++
++        //then
++
++        verify(2, getRequestedFor(urlPathEqualTo("/locations/v1/cities/autocomplete")));
++        assertEquals(200, responseOk.getStatusLine().getStatusCode());
++        assertEquals(200, responseError.getStatusLine().getStatusCode());
++        assertEquals("OK", mapper.readValue(responseOk.getEntity().getContent(), Location.class).getKey());
++        assertEquals("Error", mapper.readValue(responseError.getEntity().getContent(), Location.class).getKey());
++
++
++    }
++
++    @Test
++    void get_shouldReturn401() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 401 запущен");
++        //given
++        logger.debug("Формирование мока для GET /locations/v1/cities/autocomplete");
++        stubFor(get(urlPathEqualTo("/locations/v1/cities/autocomplete"))
++                .withQueryParam("apiKey", notMatching("82c9229354f849e78efe010d94150807"))
++                .willReturn(aResponse()
++                        .withStatus(401).withBody("ERROR")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet(getBaseUrl()+"/locations/v1/cities/autocomplete");
++        URI uri = new URIBuilder(request.getURI())
++                .addParameter("apiKey", "A_82c9229354f849e78efe010d94150807")
++                .build();
++        request.setURI(uri);
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/locations/v1/cities/autocomplete")));
++        assertEquals(401, response.getStatusLine().getStatusCode());
++        assertEquals("ERROR", convertResponseToString(response));
++
++    }
++}
+Index: untitled.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/untitled.iml b/untitled.iml
+new file mode 100644
+--- /dev/null	(date 1709549495401)
++++ b/untitled.iml	(date 1709549495401)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="GENERAL_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/test/java/org/max/seminar/accu/AbstractTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/seminar/accu/AbstractTest.java b/src/test/java/org/max/seminar/accu/AbstractTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214967)
++++ b/src/test/java/org/max/seminar/accu/AbstractTest.java	(date 1709282214967)
+@@ -0,0 +1,53 @@
++package org.max.seminar.accu;
++
++import com.github.tomakehurst.wiremock.WireMockServer;
++import org.apache.http.HttpResponse;
++import org.junit.jupiter.api.AfterAll;
++import org.junit.jupiter.api.BeforeAll;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.io.InputStream;
++import java.util.Scanner;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.configureFor;
++
++public class AbstractTest {
++
++    private static WireMockServer wireMockServer = new WireMockServer();
++    private static final int port = 8080;
++    private static String baseUrl;
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(AbstractTest.class);
++
++    @BeforeAll
++    static void startServer() {
++        baseUrl = "http://localhost:" + port;
++        wireMockServer.start();
++        configureFor("localhost", port);
++        logger.info("Start WireMockServer on port {}",port);
++    }
++
++    @AfterAll
++    static void stopServer() {
++        wireMockServer.stop();
++        logger.info("Stop WireMockServer");
++    }
++
++    //Вспомогательный метод - конвертор body to string
++    public String convertResponseToString(HttpResponse response) throws IOException {
++        logger.debug("convertResponseToString method call");
++        try(InputStream responseStream = response.getEntity().getContent();
++            Scanner scanner = new Scanner(responseStream, "UTF-8");) {
++            String responseString = scanner.useDelimiter("\\Z").next();
++            return responseString;
++        }
++
++    }
++
++    public static String getBaseUrl() {
++        return baseUrl;
++    }
++}
+Index: src/test/java/org/max/seminar/spoon/IngredientSubstitutesTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/seminar/spoon/IngredientSubstitutesTest.java b/src/test/java/org/max/seminar/spoon/IngredientSubstitutesTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214969)
++++ b/src/test/java/org/max/seminar/spoon/IngredientSubstitutesTest.java	(date 1709282214969)
+@@ -0,0 +1,100 @@
++package org.max.seminar.spoon;
++
++import com.fasterxml.jackson.databind.ObjectMapper;
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.client.utils.URIBuilder;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.Test;
++import org.max.home.spoon.AbstractTest;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.net.URI;
++import java.net.URISyntaxException;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class IngredientSubstitutesTest extends AbstractTest {
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(IngredientSubstitutesTest.class);
++
++
++    @Test
++    void get_shouldReturn200() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 200 запущен");
++        //given
++        ObjectMapper mapper = new ObjectMapper();
++        IngredientSubstitutesDto bodyOk = new IngredientSubstitutesDto();
++        bodyOk.setStatus("OK");
++
++        IngredientSubstitutesDto bodyError = new IngredientSubstitutesDto();
++        bodyError.setStatus("Error");
++
++        logger.debug("Формирование мока для GET /food/ingredients/substitutes");
++        stubFor(get(urlPathEqualTo("/food/ingredients/substitutes"))
++                .withQueryParam("ingredientName", equalTo("butter"))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(bodyOk))));
++
++        stubFor(get(urlPathEqualTo("/food/ingredients/substitutes"))
++                .withQueryParam("ingredientName", equalTo("error"))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(bodyError))));
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        logger.debug("http клиент создан");
++        //when
++
++        HttpGet request = new HttpGet(getBaseUrl()+"/food/ingredients/substitutes");
++        URI uriOk = new URIBuilder(request.getURI())
++                .addParameter("ingredientName", "butter")
++                .build();
++        request.setURI(uriOk);
++        HttpResponse responseOk = httpClient.execute(request);
++
++        URI uriError = new URIBuilder(request.getURI())
++                .addParameter("ingredientName", "error")
++                .build();
++        request.setURI(uriError);
++
++        HttpResponse responseError = httpClient.execute(request);
++
++        //then
++
++        verify(2, getRequestedFor(urlPathEqualTo("/food/ingredients/substitutes")));
++        assertEquals(200, responseOk.getStatusLine().getStatusCode());
++        assertEquals(200, responseError.getStatusLine().getStatusCode());
++        assertEquals("OK", mapper.readValue(responseOk.getEntity().getContent(), IngredientSubstitutesDto.class).getStatus());
++        assertEquals("Error", mapper.readValue(responseError.getEntity().getContent(), IngredientSubstitutesDto.class).getStatus());
++    }
++
++    @Test
++    void get_shouldReturn401() throws IOException, URISyntaxException {
++        logger.info("Тест код ответ 401 запущен");
++        //given
++        logger.debug("Формирование мока для GET /food/ingredients/substitutes");
++        stubFor(get(urlPathEqualTo("/food/ingredients/substitutes"))
++                .withQueryParam("apiKey", notMatching("82c9229354f849e78efe010d94150807"))
++                .willReturn(aResponse()
++                        .withStatus(401).withBody("ERROR")));
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpGet request = new HttpGet(getBaseUrl()+"/food/ingredients/substitutes");
++        URI uri = new URIBuilder(request.getURI())
++                .addParameter("apiKey", "A_82c9229354f849e78efe010d94150807")
++                .build();
++        request.setURI(uri);
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(getRequestedFor(urlPathEqualTo("/food/ingredients/substitutes")));
++        assertEquals(401, response.getStatusLine().getStatusCode());
++        assertEquals("ERROR", convertResponseToString(response));
++
++    }
++}
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1709534399645)
++++ b/.idea/vcs.xml	(date 1709534399645)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1709534400077)
++++ b/.idea/.gitignore	(date 1709534400077)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: src/test/java/org/max/seminar/spoon/AbstractTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/seminar/spoon/AbstractTest.java b/src/test/java/org/max/seminar/spoon/AbstractTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214968)
++++ b/src/test/java/org/max/seminar/spoon/AbstractTest.java	(date 1709282214968)
+@@ -0,0 +1,53 @@
++package org.max.seminar.spoon;
++
++import com.github.tomakehurst.wiremock.WireMockServer;
++import org.apache.http.HttpResponse;
++import org.junit.jupiter.api.AfterAll;
++import org.junit.jupiter.api.BeforeAll;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++import java.io.InputStream;
++import java.util.Scanner;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.configureFor;
++
++public class AbstractTest {
++
++    private static WireMockServer wireMockServer = new WireMockServer();
++    private static final int port = 8080;
++    private static String baseUrl;
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(AbstractTest.class);
++
++    @BeforeAll
++    static void startServer() {
++        baseUrl = "http://localhost:" + port;
++        wireMockServer.start();
++        configureFor("localhost", port);
++        logger.info("Start WireMockServer on port {}",port);
++    }
++
++    @AfterAll
++    static void stopServer() {
++        wireMockServer.stop();
++        logger.info("Stop WireMockServer");
++    }
++
++    //Вспомогательный метод - конвертор body to string
++    public String convertResponseToString(HttpResponse response) throws IOException {
++        logger.debug("convertResponseToString method call");
++        try(InputStream responseStream = response.getEntity().getContent();
++            Scanner scanner = new Scanner(responseStream, "UTF-8");) {
++            String responseString = scanner.useDelimiter("\\Z").next();
++            return responseString;
++        }
++
++    }
++
++    public static String getBaseUrl() {
++        return baseUrl;
++    }
++}
+Index: src/test/java/org/max/seminar/spoon/ClassifyCuisineTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/max/seminar/spoon/ClassifyCuisineTest.java b/src/test/java/org/max/seminar/spoon/ClassifyCuisineTest.java
+new file mode 100644
+--- /dev/null	(date 1709282214968)
++++ b/src/test/java/org/max/seminar/spoon/ClassifyCuisineTest.java	(date 1709282214968)
+@@ -0,0 +1,86 @@
++package org.max.seminar.spoon;
++
++import com.fasterxml.jackson.databind.ObjectMapper;
++import org.apache.http.HttpResponse;
++import org.apache.http.client.methods.HttpPost;
++import org.apache.http.entity.StringEntity;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.junit.jupiter.api.Test;
++import org.max.home.spoon.AbstractTest;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import java.io.IOException;
++
++import static com.github.tomakehurst.wiremock.client.WireMock.*;
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class ClassifyCuisineTest extends AbstractTest {
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(ClassifyCuisineTest.class);
++
++
++    @Test
++    void post_shouldReturn200() throws IOException {
++        logger.info("Тест код ответ 200 запущен");
++        //given
++        ObjectMapper mapper = new ObjectMapper();
++        ClassifyCuisineDTO bodyResponse = new ClassifyCuisineDTO();
++        bodyResponse.setCuisine("CuisineValue");
++
++        logger.debug("Формирование мока для POST /recipes/cuisine");
++        stubFor(post(urlEqualTo("/recipes/cuisine"))
++                .withHeader("Content-Type", equalTo("application/x-www-form-urlencoded"))
++                .withRequestBody(containing("\"title\": \"Pork roast with green beans\""))
++                .willReturn(aResponse()
++                        .withStatus(200).withBody(mapper.writeValueAsString(bodyResponse))));
++
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpPost request = new HttpPost(getBaseUrl()+"/recipes/cuisine");
++        request.addHeader("Content-Type", "application/x-www-form-urlencoded");
++        request.setEntity(new StringEntity("{" +
++                "\"title\": \"Pork roast with green beans\"" +
++                "}"));
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(postRequestedFor(urlEqualTo("/recipes/cuisine"))
++                .withHeader("Content-Type", equalTo("application/x-www-form-urlencoded")));
++        assertEquals(200, response.getStatusLine().getStatusCode());
++        ClassifyCuisineDTO bodyToCheck = mapper.readValue(response.getEntity().getContent(), ClassifyCuisineDTO.class);
++        assertEquals("CuisineValue", bodyToCheck.getCuisine());
++    }
++
++    @Test
++    void post_shouldReturn403() throws IOException {
++        logger.info("Тест код ответ 403 запущен");
++        //given
++        logger.debug("Формирование мока для POST /recipes/cuisine");
++        stubFor(post(urlEqualTo("/recipes/cuisine"))
++                .withHeader("Content-Type", equalTo("application/json"))
++                .withRequestBody(containing("\"title\": \"Pork roast with green beans\""))
++                .willReturn(aResponse()
++                        .withStatus(403).withBody("ERROR")));
++
++
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        HttpPost request = new HttpPost(getBaseUrl()+"/recipes/cuisine");
++        request.addHeader("Content-Type", "application/json");
++        request.setEntity(new StringEntity("{" +
++                "\"title\": \"Pork roast with green beans\"" +
++                "}"));
++        logger.debug("http клиент создан");
++        //when
++        HttpResponse response = httpClient.execute(request);
++        //then
++        verify(postRequestedFor(urlEqualTo("/recipes/cuisine"))
++                .withHeader("Content-Type", equalTo("application/json")));
++        assertEquals(403, response.getStatusLine().getStatusCode());
++        assertEquals("ERROR", convertResponseToString(response));
++    }
++
++}
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1709282177294)
++++ b/.gitignore	(date 1709282177294)
+@@ -0,0 +1,2 @@
++# Project exclude paths
++/target/
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1709534399605)
++++ b/.idea/misc.xml	(date 1709534399605)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK" />
++</project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1709549623750)
++++ b/.idea/compiler.xml	(date 1709549623750)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="auto" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1709632313969)
++++ b/.idea/workspace.xml	(date 1709632313969)
+@@ -0,0 +1,255 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="e177abc6-26df-4dad-ab73-7461c826261d" name="Changes" comment="5 семинар">
++      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/RunWireMock.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/demo/NotTriangleException.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/demo/Triangle.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/accu/weather/DailyForecast.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/accu/weather/Day.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/accu/weather/Headline.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/accu/weather/Maximum.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/accu/weather/Minimum.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/accu/weather/Night.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/accu/weather/Temperature.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/accu/weather/Weather.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/spoon/ConvertAmountsDto.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/home/spoon/SimilarRecipesDto.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/seminar/accu/location/AdministrativeArea.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/seminar/accu/location/Country.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/seminar/accu/location/Location.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/seminar/spoon/ClassifyCuisineDTO.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/org/max/seminar/spoon/IngredientSubstitutesDto.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/demo/LogbackExampleTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/demo/MockitoExampleTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/demo/TriangleTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/demo/WireMockTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/home/accu/AbstractTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/home/accu/GetWeatherFifeDayTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/home/accu/GetWeatherOneDayTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/home/accu/GetWeatherTenDaysTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/home/spoon/AbstractTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/home/spoon/ConvertAmountsTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/home/spoon/SimilarRecipesTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/accu/AbstractTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/accu/GetLocationTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/spoon/AbstractTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/spoon/ClassifyCuisineTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/org/max/seminar/spoon/IngredientSubstitutesTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="PUSH_TAGS">
++      <GitPushTagMode>
++        <option name="argument" value="--tags" />
++        <option name="title" value="All" />
++      </GitPushTagMode>
++    </option>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="lesson5" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="ProjectColorInfo">{
++  &quot;customColor&quot;: &quot;&quot;,
++  &quot;associatedIndex&quot;: 7
++}</component>
++  <component name="ProjectId" id="2dDDzQ6eRPWpY3ZXs5alGyHiNeM" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "JUnit.GetWeatherFifeDayTest.executor": "Run",
++    "JUnit.GetWeatherFifeDayTest.get_shouldReturn200witParthText.executor": "Run",
++    "JUnit.GetWeatherFifeDayTest.get_shouldReturn255.executor": "Run",
++    "JUnit.GetWeatherFifeDayTest.get_shouldReturn400.executor": "Run",
++    "JUnit.GetWeatherFifeDayTest.get_shouldReturn404.executor": "Run",
++    "JUnit.GetWeatherFifeDayTest.get_shouldReturn500.executor": "Run",
++    "JUnit.GetWeatherOneDayTest.get_shouldReturn200.executor": "Run",
++    "JUnit.GetWeatherOneDayTest.get_shouldReturn500.executor": "Run",
++    "JUnit.GetWeatherTenDaysTest.executor": "Run",
++    "Maven.auto [io.qameta.allure:allure-maven:2.12.0:report].executor": "Run",
++    "Maven.auto [io.qameta.allure:allure-maven:2.12.0:serve].executor": "Run",
++    "Maven.auto [test].executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "main",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "/Users/macbook/IdeaProjects/untitled",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
++  }
++}]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$" />
++    </key>
++    <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="org.max.home.accu" />
++    </key>
++  </component>
++  <component name="RunManager" selected="JUnit.GetWeatherFifeDayTest.get_shouldReturn400">
++    <configuration name="GetWeatherFifeDayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="auto" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.max.home.accu.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="org.max.home.accu" />
++      <option name="MAIN_CLASS_NAME" value="org.max.home.accu.GetWeatherFifeDayTest" />
++      <option name="TEST_OBJECT" value="class" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="GetWeatherFifeDayTest.get_shouldReturn255" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="auto" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.max.home.accu.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="org.max.home.accu" />
++      <option name="MAIN_CLASS_NAME" value="org.max.home.accu.GetWeatherFifeDayTest" />
++      <option name="METHOD_NAME" value="get_shouldReturn255" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="GetWeatherFifeDayTest.get_shouldReturn400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="auto" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.max.home.accu.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="org.max.home.accu" />
++      <option name="MAIN_CLASS_NAME" value="org.max.home.accu.GetWeatherFifeDayTest" />
++      <option name="METHOD_NAME" value="get_shouldReturn400" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="GetWeatherFifeDayTest.get_shouldReturn404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="auto" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.max.home.accu.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="org.max.home.accu" />
++      <option name="MAIN_CLASS_NAME" value="org.max.home.accu.GetWeatherFifeDayTest" />
++      <option name="METHOD_NAME" value="get_shouldReturn404" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="GetWeatherTenDaysTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="auto" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.max.home.accu.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="org.max.home.accu" />
++      <option name="MAIN_CLASS_NAME" value="org.max.home.accu.GetWeatherTenDaysTest" />
++      <option name="TEST_OBJECT" value="class" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="JUnit.GetWeatherFifeDayTest.get_shouldReturn400" />
++        <item itemvalue="JUnit.GetWeatherTenDaysTest" />
++        <item itemvalue="JUnit.GetWeatherFifeDayTest" />
++        <item itemvalue="JUnit.GetWeatherFifeDayTest.get_shouldReturn255" />
++        <item itemvalue="JUnit.GetWeatherFifeDayTest.get_shouldReturn404" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="e177abc6-26df-4dad-ab73-7461c826261d" name="Changes" comment="" />
++      <created>1709534016703</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1709534016703</updated>
++      <workItem from="1709534017808" duration="6163000" />
++      <workItem from="1709625577509" duration="2424000" />
++    </task>
++    <task id="LOCAL-00001" summary="5 семинар">
++      <option name="closed" value="true" />
++      <created>1709535018087</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1709535018087</updated>
++    </task>
++    <task id="LOCAL-00002" summary="5 семинар">
++      <option name="closed" value="true" />
++      <created>1709540020036</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1709540020036</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="5 семинар" />
++    <option name="LAST_COMMIT_MESSAGE" value="5 семинар" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1709549623785)
++++ b/.idea/jarRepositories.xml	(date 1709549623785)
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="mvnrepository" />
++      <option name="name" value="mvnrepository" />
++      <option name="url" value="https://mvnrepository.com/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/java/org/max/demo/Triangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/demo/Triangle.java b/src/main/java/org/max/demo/Triangle.java
+new file mode 100644
+--- /dev/null	(date 1709282214951)
++++ b/src/main/java/org/max/demo/Triangle.java	(date 1709282214951)
+@@ -0,0 +1,35 @@
++package org.max.demo;
++
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++public class Triangle {
++
++    private static final Logger logger
++            = LoggerFactory.getLogger(Triangle.class);
++
++    public double square(int a, int b, int c) throws NotTriangleException {
++        logger.info("Вызвана функция вычисления площади треугольника со сторонами {}, {}, {}", a, b, c);
++        testTriangle(a, b, c);
++        return getSquare(a, b, c);
++    }
++
++    public void testTriangle(int a, int b, int c) throws NotTriangleException {
++        logger.info("Вызвана функция проверки существования треугольника со сторонами {}, {}, {}", a, b, c);
++        if (a + b >= c) {
++            if (b + c >= a)
++                if (a + c >= b)
++                    logger.info("Треугольник сущесвует");
++        }
++        else {
++            logger.error("Треугольник не сущесвует");
++            throw new NotTriangleException();
++        }
++    }
++
++    public double getSquare(int a, int b, int c) {
++        double s=(((a+b+c)/2)*((a+b+c)/2-a)*((a+b+c)/2-b)*((a+b+c)/2-c));
++        return Math.sqrt(s);
++    }
++
++}
+Index: src/main/java/org/max/demo/NotTriangleException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/demo/NotTriangleException.java b/src/main/java/org/max/demo/NotTriangleException.java
+new file mode 100644
+--- /dev/null	(date 1709282214951)
++++ b/src/main/java/org/max/demo/NotTriangleException.java	(date 1709282214951)
+@@ -0,0 +1,6 @@
++package org.max.demo;
++
++public class NotTriangleException extends Exception {
++
++
++}
+Index: src/main/java/org/max/home/accu/weather/Night.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/accu/weather/Night.java b/src/main/java/org/max/home/accu/weather/Night.java
+new file mode 100644
+--- /dev/null	(date 1709282214953)
++++ b/src/main/java/org/max/home/accu/weather/Night.java	(date 1709282214953)
+@@ -0,0 +1,53 @@
++
++package org.max.home.accu.weather;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "Icon",
++    "IconPhrase",
++    "HasPrecipitation"
++})
++public class Night {
++
++    @JsonProperty("Icon")
++    private Integer icon;
++    @JsonProperty("IconPhrase")
++    private String iconPhrase;
++    @JsonProperty("HasPrecipitation")
++    private Boolean hasPrecipitation;
++
++    @JsonProperty("Icon")
++    public Integer getIcon() {
++        return icon;
++    }
++
++    @JsonProperty("Icon")
++    public void setIcon(Integer icon) {
++        this.icon = icon;
++    }
++
++    @JsonProperty("IconPhrase")
++    public String getIconPhrase() {
++        return iconPhrase;
++    }
++
++    @JsonProperty("IconPhrase")
++    public void setIconPhrase(String iconPhrase) {
++        this.iconPhrase = iconPhrase;
++    }
++
++    @JsonProperty("HasPrecipitation")
++    public Boolean getHasPrecipitation() {
++        return hasPrecipitation;
++    }
++
++    @JsonProperty("HasPrecipitation")
++    public void setHasPrecipitation(Boolean hasPrecipitation) {
++        this.hasPrecipitation = hasPrecipitation;
++    }
++
++}
+Index: src/main/java/org/max/home/accu/weather/Maximum.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/accu/weather/Maximum.java b/src/main/java/org/max/home/accu/weather/Maximum.java
+new file mode 100644
+--- /dev/null	(date 1709282214953)
++++ b/src/main/java/org/max/home/accu/weather/Maximum.java	(date 1709282214953)
+@@ -0,0 +1,53 @@
++
++package org.max.home.accu.weather;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "Value",
++    "Unit",
++    "UnitType"
++})
++public class Maximum {
++
++    @JsonProperty("Value")
++    private Double value;
++    @JsonProperty("Unit")
++    private String unit;
++    @JsonProperty("UnitType")
++    private Integer unitType;
++
++    @JsonProperty("Value")
++    public Double getValue() {
++        return value;
++    }
++
++    @JsonProperty("Value")
++    public void setValue(Double value) {
++        this.value = value;
++    }
++
++    @JsonProperty("Unit")
++    public String getUnit() {
++        return unit;
++    }
++
++    @JsonProperty("Unit")
++    public void setUnit(String unit) {
++        this.unit = unit;
++    }
++
++    @JsonProperty("UnitType")
++    public Integer getUnitType() {
++        return unitType;
++    }
++
++    @JsonProperty("UnitType")
++    public void setUnitType(Integer unitType) {
++        this.unitType = unitType;
++    }
++
++}
+Index: src/main/java/org/max/home/accu/weather/Day.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/accu/weather/Day.java b/src/main/java/org/max/home/accu/weather/Day.java
+new file mode 100644
+--- /dev/null	(date 1709282214952)
++++ b/src/main/java/org/max/home/accu/weather/Day.java	(date 1709282214952)
+@@ -0,0 +1,79 @@
++
++package org.max.home.accu.weather;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "Icon",
++    "IconPhrase",
++    "HasPrecipitation",
++    "PrecipitationType",
++    "PrecipitationIntensity"
++})
++public class Day {
++
++    @JsonProperty("Icon")
++    private Integer icon;
++    @JsonProperty("IconPhrase")
++    private String iconPhrase;
++    @JsonProperty("HasPrecipitation")
++    private Boolean hasPrecipitation;
++    @JsonProperty("PrecipitationType")
++    private String precipitationType;
++    @JsonProperty("PrecipitationIntensity")
++    private String precipitationIntensity;
++
++    @JsonProperty("Icon")
++    public Integer getIcon() {
++        return icon;
++    }
++
++    @JsonProperty("Icon")
++    public void setIcon(Integer icon) {
++        this.icon = icon;
++    }
++
++    @JsonProperty("IconPhrase")
++    public String getIconPhrase() {
++        return iconPhrase;
++    }
++
++    @JsonProperty("IconPhrase")
++    public void setIconPhrase(String iconPhrase) {
++        this.iconPhrase = iconPhrase;
++    }
++
++    @JsonProperty("HasPrecipitation")
++    public Boolean getHasPrecipitation() {
++        return hasPrecipitation;
++    }
++
++    @JsonProperty("HasPrecipitation")
++    public void setHasPrecipitation(Boolean hasPrecipitation) {
++        this.hasPrecipitation = hasPrecipitation;
++    }
++
++    @JsonProperty("PrecipitationType")
++    public String getPrecipitationType() {
++        return precipitationType;
++    }
++
++    @JsonProperty("PrecipitationType")
++    public void setPrecipitationType(String precipitationType) {
++        this.precipitationType = precipitationType;
++    }
++
++    @JsonProperty("PrecipitationIntensity")
++    public String getPrecipitationIntensity() {
++        return precipitationIntensity;
++    }
++
++    @JsonProperty("PrecipitationIntensity")
++    public void setPrecipitationIntensity(String precipitationIntensity) {
++        this.precipitationIntensity = precipitationIntensity;
++    }
++
++}
+Index: src/main/java/org/max/home/accu/weather/Headline.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/accu/weather/Headline.java b/src/main/java/org/max/home/accu/weather/Headline.java
+new file mode 100644
+--- /dev/null	(date 1709282214953)
++++ b/src/main/java/org/max/home/accu/weather/Headline.java	(date 1709282214953)
+@@ -0,0 +1,131 @@
++
++package org.max.home.accu.weather;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "EffectiveDate",
++    "EffectiveEpochDate",
++    "Severity",
++    "Text",
++    "Category",
++    "EndDate",
++    "EndEpochDate",
++    "MobileLink",
++    "Link"
++})
++public class Headline {
++
++    @JsonProperty("EffectiveDate")
++    private String effectiveDate;
++    @JsonProperty("EffectiveEpochDate")
++    private Integer effectiveEpochDate;
++    @JsonProperty("Severity")
++    private Integer severity;
++    @JsonProperty("Text")
++    private String text;
++    @JsonProperty("Category")
++    private String category;
++    @JsonProperty("EndDate")
++    private String endDate;
++    @JsonProperty("EndEpochDate")
++    private Integer endEpochDate;
++    @JsonProperty("MobileLink")
++    private String mobileLink;
++    @JsonProperty("Link")
++    private String link;
++
++    @JsonProperty("EffectiveDate")
++    public String getEffectiveDate() {
++        return effectiveDate;
++    }
++
++    @JsonProperty("EffectiveDate")
++    public void setEffectiveDate(String effectiveDate) {
++        this.effectiveDate = effectiveDate;
++    }
++
++    @JsonProperty("EffectiveEpochDate")
++    public Integer getEffectiveEpochDate() {
++        return effectiveEpochDate;
++    }
++
++    @JsonProperty("EffectiveEpochDate")
++    public void setEffectiveEpochDate(Integer effectiveEpochDate) {
++        this.effectiveEpochDate = effectiveEpochDate;
++    }
++
++    @JsonProperty("Severity")
++    public Integer getSeverity() {
++        return severity;
++    }
++
++    @JsonProperty("Severity")
++    public void setSeverity(Integer severity) {
++        this.severity = severity;
++    }
++
++    @JsonProperty("Text")
++    public String getText() {
++        return text;
++    }
++
++    @JsonProperty("Text")
++    public void setText(String text) {
++        this.text = text;
++    }
++
++    @JsonProperty("Category")
++    public String getCategory() {
++        return category;
++    }
++
++    @JsonProperty("Category")
++    public void setCategory(String category) {
++        this.category = category;
++    }
++
++    @JsonProperty("EndDate")
++    public String getEndDate() {
++        return endDate;
++    }
++
++    @JsonProperty("EndDate")
++    public void setEndDate(String endDate) {
++        this.endDate = endDate;
++    }
++
++    @JsonProperty("EndEpochDate")
++    public Integer getEndEpochDate() {
++        return endEpochDate;
++    }
++
++    @JsonProperty("EndEpochDate")
++    public void setEndEpochDate(Integer endEpochDate) {
++        this.endEpochDate = endEpochDate;
++    }
++
++    @JsonProperty("MobileLink")
++    public String getMobileLink() {
++        return mobileLink;
++    }
++
++    @JsonProperty("MobileLink")
++    public void setMobileLink(String mobileLink) {
++        this.mobileLink = mobileLink;
++    }
++
++    @JsonProperty("Link")
++    public String getLink() {
++        return link;
++    }
++
++    @JsonProperty("Link")
++    public void setLink(String link) {
++        this.link = link;
++    }
++
++}
+Index: src/main/java/org/max/home/accu/weather/Temperature.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/accu/weather/Temperature.java b/src/main/java/org/max/home/accu/weather/Temperature.java
+new file mode 100644
+--- /dev/null	(date 1709282214953)
++++ b/src/main/java/org/max/home/accu/weather/Temperature.java	(date 1709282214953)
+@@ -0,0 +1,40 @@
++
++package org.max.home.accu.weather;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "Minimum",
++    "Maximum"
++})
++public class Temperature {
++
++    @JsonProperty("Minimum")
++    private Minimum minimum;
++    @JsonProperty("Maximum")
++    private Maximum maximum;
++
++    @JsonProperty("Minimum")
++    public Minimum getMinimum() {
++        return minimum;
++    }
++
++    @JsonProperty("Minimum")
++    public void setMinimum(Minimum minimum) {
++        this.minimum = minimum;
++    }
++
++    @JsonProperty("Maximum")
++    public Maximum getMaximum() {
++        return maximum;
++    }
++
++    @JsonProperty("Maximum")
++    public void setMaximum(Maximum maximum) {
++        this.maximum = maximum;
++    }
++
++}
+Index: src/main/java/org/max/home/accu/weather/Minimum.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/accu/weather/Minimum.java b/src/main/java/org/max/home/accu/weather/Minimum.java
+new file mode 100644
+--- /dev/null	(date 1709282214953)
++++ b/src/main/java/org/max/home/accu/weather/Minimum.java	(date 1709282214953)
+@@ -0,0 +1,53 @@
++
++package org.max.home.accu.weather;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "Value",
++    "Unit",
++    "UnitType"
++})
++public class Minimum {
++
++    @JsonProperty("Value")
++    private Double value;
++    @JsonProperty("Unit")
++    private String unit;
++    @JsonProperty("UnitType")
++    private Integer unitType;
++
++    @JsonProperty("Value")
++    public Double getValue() {
++        return value;
++    }
++
++    @JsonProperty("Value")
++    public void setValue(Double value) {
++        this.value = value;
++    }
++
++    @JsonProperty("Unit")
++    public String getUnit() {
++        return unit;
++    }
++
++    @JsonProperty("Unit")
++    public void setUnit(String unit) {
++        this.unit = unit;
++    }
++
++    @JsonProperty("UnitType")
++    public Integer getUnitType() {
++        return unitType;
++    }
++
++    @JsonProperty("UnitType")
++    public void setUnitType(Integer unitType) {
++        this.unitType = unitType;
++    }
++
++}
+Index: src/main/java/org/max/home/accu/weather/Weather.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/max/home/accu/weather/Weather.java b/src/main/java/org/max/home/accu/weather/Weather.java
+new file mode 100644
+--- /dev/null	(date 1709282214954)
++++ b/src/main/java/org/max/home/accu/weather/Weather.java	(date 1709282214954)
+@@ -0,0 +1,42 @@
++
++package org.max.home.accu.weather;
++
++import com.fasterxml.jackson.annotation.JsonInclude;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.annotation.JsonPropertyOrder;
++
++import java.util.List;
++
++@JsonInclude(JsonInclude.Include.NON_NULL)
++@JsonPropertyOrder({
++    "Headline",
++    "DailyForecasts"
++})
++public class Weather {
++
++    @JsonProperty("Headline")
++    private Headline headline;
++    @JsonProperty("DailyForecasts")
++    private List<DailyForecast> dailyForecasts;
++
++    @JsonProperty("Headline")
++    public Headline getHeadline() {
++        return headline;
++    }
++
++    @JsonProperty("Headline")
++    public void setHeadline(Headline headline) {
++        this.headline = headline;
++    }
++
++    @JsonProperty("DailyForecasts")
++    public List<DailyForecast> getDailyForecasts() {
++        return dailyForecasts;
++    }
++
++    @JsonProperty("DailyForecasts")
++    public void setDailyForecasts(List<DailyForecast> dailyForecasts) {
++        this.dailyForecasts = dailyForecasts;
++    }
++
++}
